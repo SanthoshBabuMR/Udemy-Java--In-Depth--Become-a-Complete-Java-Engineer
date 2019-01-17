@@ -14,5 +14,9 @@ class StudentTest {
         System.out.println("Name of student1: " + student1.name);
         System.out.println("Name of student2: " + student2.name);
         System.out.println("Name of student3: " + student3.name);
+
+        student1.updateProfile("john");
+        System.out.println("Updated name of student1: " + student1.name);
+
     }
 }
