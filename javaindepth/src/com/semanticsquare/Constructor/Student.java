@@ -12,8 +12,8 @@ class Student {
         this.name = name;
     }
     
-    boolean updateProfile(String name) {
+    String updateProfile(String name) {
         this.name = name;
-        return true;
+        return this.name;
     }
 }
