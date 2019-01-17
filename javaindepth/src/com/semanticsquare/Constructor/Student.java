@@ -2,10 +2,12 @@ class Student {
     int id; 
     String name;
     String gender;
+    char[] grades;
     
-    Student(int id, String name) {
+    Student(int id, String name, char[] grades) {
         this(name);
         this.id = id;
+        this.grades = grades;
     }
     
     Student(String name) {
