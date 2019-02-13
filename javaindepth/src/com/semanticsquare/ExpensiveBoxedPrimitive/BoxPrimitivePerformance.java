@@ -1,4 +1,4 @@
-class CompareBoxedPrimitive {
+class BoxPrimitivePerformance {
 	static void veryExpensive() {
 		System.out.println("very expensive");
 		Long sum = 0L;
