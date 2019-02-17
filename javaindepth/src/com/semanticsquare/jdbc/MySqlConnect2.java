@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.PreparedStatement;
 
 public class MySqlConnect2 {
 	final static String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
@@ -14,6 +15,7 @@ public class MySqlConnect2 {
 	public static void main(String[] args) {
 		Connection conn = null;
 		Statement stmt = null;
+		PreparedStatement pstmt = null;
 		try {
 			Class.forName(JDBC_DRIVER);
 			conn = DriverManager.getConnection(DB_URL, USER, PASSWORD);
@@ -32,6 +34,20 @@ public class MySqlConnect2 {
 				System.out.println("");
 			}
 			
+			String psql = "Select * from employees where id in (?,?)";
+			pstmt = conn.prepareStatement(psql);
+			pstmt.setInt(1,101);
+			pstmt.setInt(2,102);
+			
+			System.out.println("Prepared stmt");
+			ResultSet rs2 = pstmt.executeQuery();
+			while(rs2.next()) {
+				System.out.print(rs2.getInt("id") + " - ");
+				System.out.print(rs2.getInt("age") + " - ");
+				System.out.print(rs2.getString("first") + " - ");
+				System.out.print(rs2.getString("last") + " - ");
+				System.out.println("");
+			}
 			
 			stmt.close();
 			conn.close();
