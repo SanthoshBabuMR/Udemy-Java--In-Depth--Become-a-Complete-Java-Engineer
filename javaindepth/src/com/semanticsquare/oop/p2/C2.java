@@ -1,5 +1,5 @@
-package com.semanticsqare.oop.p2;
-import com.semanticsqare.oop.p1.A1;
+package com.semanticsquare.oop.p2;
+import com.semanticsquare.oop.p1.A1;
 
 
 public class C2 extends A1 {

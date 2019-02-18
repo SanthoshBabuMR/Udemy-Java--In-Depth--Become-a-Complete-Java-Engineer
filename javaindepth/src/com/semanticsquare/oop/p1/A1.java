@@ -1,4 +1,4 @@
-package com.semanticsqare.oop.p1;
+package com.semanticsquare.oop.p1;
 
 public class A1 {
 	static private int privateMember = 1;
