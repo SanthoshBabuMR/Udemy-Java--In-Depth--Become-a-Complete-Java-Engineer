@@ -27,5 +27,11 @@ class CompareBoxPrimitive {
 		System.out.println("box primitive: n1 < n3: " + (n1 < n3)); // does auto unboxing
 		System.out.println("");
 		
+		Integer i;
+		
+		  if (i==0) 
+		    System.out.println("weird!");
+		
+		
 	}
 }
