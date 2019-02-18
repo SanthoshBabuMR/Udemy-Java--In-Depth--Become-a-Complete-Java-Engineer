@@ -3,10 +3,10 @@ import com.semanticsquare.oop.p2.C2;
 
 public class B1 {
 	public static void main(String[] args) {
-//		System.out.println("A1.privateMember: " + A1.privateMember);
+		// System.out.println("A1.privateMember: " + A1.privateMember);
 
 		System.out.println("A1.defaultMember: " + A1.defaultMember);
-		System.out.println("C1.privateMember: " + C1.defaultMember);
+		System.out.println("C1.defaultMember: " + C1.defaultMember);
 		
 		System.out.println("A1.protectedMember: " + A1.protectedMember);
 		System.out.println("C1.protectedMember: " + C1.protectedMember);
